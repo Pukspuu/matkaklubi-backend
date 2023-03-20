@@ -22,7 +22,7 @@ app.get("/treks", async (req, res) => {
   let sqlAdditionalFilters = '';
 
   if (columns !==undefined){
-   // sqlColumns = columns;
+   sqlColumns = columns.toString();
   }
   if (status !== undefined){
     sqlAdditionalFilters +=  `WHERE status = '${status}'`
